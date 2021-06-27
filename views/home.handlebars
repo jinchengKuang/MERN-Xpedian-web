@@ -1,0 +1,113 @@
+{{!-- hero section --}}
+<div id="carouselCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="/img/hero-img/pexels-julius-silver-753626.jpg" class="d-block w-100 carousel-pic" alt="first image">
+            <div class="carousel-caption d-none d-md-block bg-dark text-light">
+                <h5>Welcome to Xpedian</h5>
+                <p>Welcome to book your trip at Xpedian</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="/img/hero-img/pexels-eneida-nieves-803975.jpg" class="d-block w-100" alt="second image">
+            <div class="carousel-caption d-none d-md-block  bg-dark text-light">
+                <h5>Featured trip</h5>
+                <p>Greate package to enjoy wild life</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="/img/hero-img/pexels-asad-photo-maldives-1024960.jpg" class="d-block w-100" alt="third image">
+            <div class="carousel-caption d-none d-md-block  bg-dark text-light">
+                <h5>Honeymoon</h5>
+                <p>Enjoy your honeymoon</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="/img/hero-img/pexels-riciardus-307008.jpg" class="d-block w-100" alt="fourth image">
+            <div class="carousel-caption d-none d-md-block  bg-dark text-light">
+                <h5>Higher Mountain</h5>
+                <p>Higher, Faster, Stronger</p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+{{!-- browse by property type section --}}
+<section id="browse-property-section">
+    <hr>
+    <div class="browse-section-header">
+        <h1 class="text-center text-light">Browse by Property Type</h1>
+    </div>
+    <hr>
+    <div class="property-card-container">
+        {{#each propertyTypes}}
+            <div class="property-card">
+                <a href="">
+                    <img src={{this.image}} alt="" class="rounded">
+                </a>
+                <br>
+                <div class="property-card-caption h4 text-light text-center">
+                    {{this.property_type}}
+                    <br>
+                    <div class="property-card-captioin-numbers h5 text-muted text-center">
+                        {{this.numbers}} {{this.property_type}}s                 
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+</section>
+
+{{!-- browse by location type section --}}
+<section id="browse-location-section">
+    <hr>
+    <div class="browse-section-header">
+        <h1 class="text-center text-light">Browse by Location</h1>
+    </div>
+    <hr>
+    <div class="location-card-container">
+        {{#each locations}}
+        <div class="location-card text-center">
+            <a href="">
+                <img src={{this.image}} alt="" class="rounded">
+            </a>
+            <br>
+            <div class="location-card-caption h4 text-light ">
+                {{this.location}}
+                <br>
+                <div class="location-card-captioin-numbers h5 text-muted ">
+                    {{this.numbers}} properties                 
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</section>
+
+
+{{!-- content section --}}
+<section id="content-section">
+    <hr>
+    <div class="text-center text-light h1">Discover Experience</div>
+    <hr>
+    <div class="content-card-container">
+        {{#each contents}}
+        <div class="content-card text-light text-center">
+            <a href="">
+                <img src={{this.image}} alt="" class="rounded">
+            </a>
+            <h4 class="content-card-caption">{{this.title}}</h4>
+                <div class="content-card-captioin-numbers h5 text-muted">
+                    {{this.sub_title}}                 
+                </div>
+        </div>
+        {{/each}}
+    </div>
+</section>

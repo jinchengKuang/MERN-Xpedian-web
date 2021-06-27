@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XPEDIAN-WEB322</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+{{!-- nav bar --}}
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/"><img class="mb-2" src="/img/logo.jpg" alt="" width="36" height="36"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/listings">Listings</a>
+                    </li>
+                </ul>                
+
+                <div class="me-2" >
+                    <a href="/user/registration">
+                        <button class="btn btn-primary btn-outline-light" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square-fill" viewBox="0 0 16 16">
+  <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z"/>
+</svg> Registration</button>
+                    </a>
+                </div>
+                <div class="me-2" >
+                    <a href="/user/login">
+                        <button class="btn btn-success btn-outline-light"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"/>
+    <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+    </svg> Log In </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        {{{body}}}
+    </main>
+
+    {{!-- footer --}}
+    <footer class="pt-4 my-md-5 pt-md-5 border-top" id="footer-section">
+        <div class="row">
+            <div class="col-8 col-md">
+                <img class="mb-2" src="/img/logo.jpg" alt="" width="48" height="48">
+                <small class="d-block mb-3 text-muted">&copy; 2021 All rights reserved.</small>
+            </div>
+            <div class="col-8 col-md">
+                <h5 class="text-primary">Menu</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="/">Home</a></li>
+                    <li><a class="text-muted" href="/listings">Listings</a></li>
+                    <li><a class="text-muted" href="/user/registration">Registration</a></li>
+                    <li><a class="text-muted" href="/user/login">Log In</a></li>
+                </ul>
+            </div>
+            <div class="col-8 col-md">
+                <h5 class="text-primary">Social Media</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="text-muted" href="http://www.linkedin.com">LinkedIn</a></li>
+                    <li><a class="text-muted" href="http://www.github.com">Github</a></li>
+                    <li><a class="text-muted" href="http://www.facebook.com">Facebook</a></li>
+                    <li><a class="text-muted" href="http://www.twitter.com">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+</body>
+</html>

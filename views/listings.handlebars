@@ -1,0 +1,48 @@
+<section id="listing-section">
+    <div class="h1 text-center text-light my-3">Listings</div>
+    
+    {{#each listings}}
+        <div class="container-fluid d-flex justify-content-center">
+            <div class="card mb-3 w-75 border-primary listing-card">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <a href="/listings/list/{{this.id}}">
+                            <img src={{this.lg_image}} class="img-fluid rounded listing-pic" alt="...">                       
+                        </a>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="card-body">
+                            <a href="/listings/list/{{this.id}}">
+                            <div class="card-title h5">{{this.title}}</div>
+                            </a>
+                            <p class="card-text">
+                                {{this.location}} <br>
+                                Type: {{this.property_type}} <br>
+                                {{this.details.bedroom}} bedroom | {{this.details.living_room}} living rooms | {{this.details.bathroom}} bathroom <br>
+                                {{this.details.beds.twin}} twin | {{this.details.beds.full}} full | {{this.details.beds.king}} king | {{this.details.beds.sofa_bed}} sofa bed <br>
+                                <p class="h6">
+                                    {{this.summary}}
+                                </p>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <button type="button" class="btn btn-warning disabled mt-4">
+                            <p class="h5 text-center mx-3 my-1 px-3">Rating: {{this.star_rating}}</p>
+                        </button>
+                        <div class="card-body listing-price h4 mt-4">
+                            $ {{this.price}} <br>
+                            <small class="text-muted"> + tax</small>
+                        </div>
+                        <a href="/listings/list/{{this.id}}" class="btn btn-info position-absolute bottom-0 mb-5" role="button">
+                            <p class="h4 text-center mx-3 px-3">
+                                See Details
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    {{/each}}
+</section>
