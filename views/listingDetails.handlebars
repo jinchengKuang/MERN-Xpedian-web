@@ -36,34 +36,36 @@
         </div>
     </div>
 
-    <div class="row mx-5">
-        <div class="col-lg-4">
-            <div class="card">
-                <div class="card-body">
-                    <h4>Property Type: {{listing.property_type}}</h4>
-                    <h6>Bedroom: {{listing.details.bedroom}}</h6>
-                    <h6>Living Room: {{listing.details.living_room}}</h6>
-                    <h6>Bathroom: {{listing.details.bathroom}}</h6>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4>Property Type: {{listing.property_type}}</h4>
+                        <h6>Bedroom: {{listing.details.bedroom}}</h6>
+                        <h6>Living Room: {{listing.details.living_room}}</h6>
+                        <h6>Bathroom: {{listing.details.bathroom}}</h6>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-lg-2">
-            <div class="card">
-                <div class="card-body">
-                    <h6>Twin Bed: {{listing.details.beds.twin}}</h6>
-                    <h6>Full Bed: {{listing.details.beds.full}}</h6>
-                    <h6>King Bed: {{listing.details.beds.king}}</h6>
-                    <h6>Sofa Bed: {{listing.details.beds.sofa_bed}}</h6>
+            <div class="col-lg-2">
+                <div class="card">
+                    <div class="card-body">
+                        <h6>Twin Bed: {{listing.details.beds.twin}}</h6>
+                        <h6>Full Bed: {{listing.details.beds.full}}</h6>
+                        <h6>King Bed: {{listing.details.beds.king}}</h6>
+                        <h6>Sofa Bed: {{listing.details.beds.sofa_bed}}</h6>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-lg-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5>{{listing.summary}}</h5>
+            <div class="col-lg-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h5>{{listing.summary}}</h5>
+                    </div>
                 </div>
             </div>
-        </div>
+        </div>     
     </div>
     <div class="text-center">
         <a href="/" class="btn btn-lg btn-primary mt-3"><p class="h3 px-3">BOOK IT NOW  ${{listing.price}}</p> </a>
