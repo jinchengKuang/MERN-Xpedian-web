@@ -5,29 +5,41 @@
             <div class="form-row text-light">
                 <div class="form-group">
                     <label for="firstName">First Name</label>
-                    <input type="firstName" class="form-control" id="firstName" placeholder="First Name" name="firstName">
+                    <input type="firstName" class="form-control" id="firstName" placeholder="First Name" name="firstName" value="{{userInput.firstName}}">
                 </div>
                 <div class="form-group">
                     <label for="lastName">Last Name</label>
-                    <input type="lastName" class="form-control" id="lastName" placeholder="Last Name" name="lastName">
+                    <input type="lastName" class="form-control" id="lastName" placeholder="Last Name" name="lastName" value="{{userInput.lastName}}">
                 </div>
                 <div class="form-group">
                     <label for="email">email</label>
-                    <input type="email" class="form-control" id="email" placeholder="email" name="email">
+                    <input type="email" class="form-control" id="email" placeholder="email" name="email" value="{{userInput.email}}">
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="password" name="password">
+                    <input type="password" class="form-control" id="password" placeholder="password" name="password" value="{{userInput.password}}">
                 </div>
                 <div class="form-group">
                     <label for="confirmPassword">Confirm Password</label>
-                    <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password" name="confirmPassword">
+                    <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password" name="confirmPassword" value="{{userInput.confirmPassword}}">
                 </div>
             </div>
             <button type="submit " class="btn btn-primary mt-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square-fill" viewBox="0 0 16 16">
   <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z"/>
 </svg> Registeration</button>
         </form>
+        {{#if errors}}
+            <div class="container rounded text-danger h5 my-3 py-3 px-3 bg-warning">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+</svg> Error: <br>
+                {{#each errors}}
+                    {{this}} <br> 
+                {{/each}}
+            </div>
+        {{/if}}
+    
     </div>
-
 </section>
+
