@@ -32,6 +32,7 @@ router.post("/registration", (req, res) => {
         errors.push("Confirm password does not match");
     }
 
+    // validate email
     const regEmail = /^[0-9a-zA-Z_.-]+[@][0-9a-zA-Z_.-]+([.][a-zA-Z]+){1,2}$/;
     if (!regEmail.test(req.body.email)) {
         errors.push("Please enter a correct email");
@@ -62,9 +63,9 @@ router.post("/registration", (req, res) => {
         const msg = {
             to: req.body.email, // Change to your recipient
             from: 'jinchengkuang@gmail.com', // Change to your verified sender
-            subject: 'Welcome to Expedian',
-            text: 'Thanks for registering your account on Expedian',
-            html: '<strong>Thanks for registering your account on Expedian</strong>',
+            subject: 'Welcome to Xpedian',
+            text: 'Thanks for registering your account on Xpedian',
+            html: '<strong>Thanks for registering your account on Xpedian</strong>',
         }
         sgMail
             .send(msg)
