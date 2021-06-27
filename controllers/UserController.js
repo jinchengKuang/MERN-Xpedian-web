@@ -11,14 +11,18 @@ router.get("/dashboard", (req, res) => {
     res.render("dashboard")
 })
 
+router.get("error", (req, res) => {
+    res.render("error");
+})
+
 router.post("/registration", validationMiddleware.validateRegForm, (req, res) => {
     sgMail.setApiKey(process.env.SENDGRID_API_KEY)
     const msg = {
         to: req.body.email, // Change to your recipient
         from: 'jinchengkuang@gmail.com', // Change to your verified sender
-        subject: `Hi ${req.body.firstName}, welcome to Xpedian`,
+        subject: 'Welcome to Xpedian',
         text: 'Thanks for registering your account on Xpedian',
-        html: `<strong>Hi ${req.body.firstName}, <br>Thanks for registering your account on Xpedian</strong>`,
+        html: '<strong>Thanks for registering your account on Xpedian</strong>',
     }
     sgMail
         .send(msg)
