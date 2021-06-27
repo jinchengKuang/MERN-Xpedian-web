@@ -9,26 +9,16 @@ router.get("/", (req, res) => {
     res.render("listings", { listings, locations });
 })
 
-// router.get("/list", authMiddleware.isAuthenticated, authMiddleware.isAuthorized, (req, res) => {
-//     const listingss = ListingsModel.getAlllistingss()
-//     res.render("listingsListing", { listingss });
-// })
-
-// router.get("/description", (req, res) => {
-//     res.render("listingsDescription");
-// })
-
 router.get("/list/:id", (req, res) => {
     const id = parseInt(req.params.id);
     const listing = ListingsModel.getAListing(id);
-    const smImages = ListingsModel.getSmImages(id);
     if (listing != undefined) {
         res.render("listingDetails", {
-            listing: ListingsModel.getAListing(id),
+            listing,
             smImages: ListingsModel.getSmImages(id)
         })
     } else {
-        res.send("404 Page");
+        res.render("error");
     }
 })
 

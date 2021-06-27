@@ -16,15 +16,11 @@ app.use(express.static("public"));
 
 app.use(express.urlencoded({ extended: false }))
 
-app.use(middleware1.validateRegForm);
-app.use(middleware1.validateLoginForm);
-app.use(middleware1.validateAdminForm);
-
 app.use("/", generalController);
 app.use("/listings", listingController);
 app.use("/user", userController);
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
     console.log(`server running on PORT ${PORT}`);
