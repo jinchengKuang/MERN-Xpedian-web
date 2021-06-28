@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const ListingsModel = require("../models/ListingsModel.js");
-const authMiddleware = require('../middleware/Authentication.js')
 
 router.get("/", (req, res) => {
     const listings = ListingsModel.getAllListings();
