@@ -1,6 +1,7 @@
 exports.validateLoginForm = (req, res, next) => {
     const userInput = req.body;
     const errors = [];
+
     // validate login form
     if (req.body.email == "") {
         errors.push("Please enter your email");

@@ -1,7 +1,7 @@
 const express = require("express");
 const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
-const middleware1 = require('./middleware/Validation.js')
+// const middleware1 = require('./middleware/Validation.js')
 
 const generalController = require("./controllers/GeneralController.js");
 const listingController = require("./controllers/ListingController.js");

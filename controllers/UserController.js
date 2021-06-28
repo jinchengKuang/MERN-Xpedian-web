@@ -15,6 +15,10 @@ router.get("error", (req, res) => {
     res.render("error");
 })
 
+router.get("/registration", (req, res) => {
+    res.render("reg");
+})
+
 router.post("/registration", validationMiddleware.validateRegForm, (req, res) => {
     sgMail.setApiKey(process.env.SENDGRID_API_KEY)
     const msg = {
@@ -34,16 +38,12 @@ router.post("/registration", validationMiddleware.validateRegForm, (req, res) =>
         })
 })
 
-router.post("/login", validationMiddleware.validateLoginForm, (req, res) => {
-    res.redirect("dashboard");
-})
-
-router.get("/registration", (req, res) => {
-    res.render("reg");
-})
-
 router.get("/login", (req, res) => {
     res.render("login");
+})
+
+router.post("/login", validationMiddleware.validateLoginForm, (req, res) => {
+    res.redirect("dashboard");
 })
 
 module.exports = router;

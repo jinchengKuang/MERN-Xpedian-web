@@ -1,45 +1,63 @@
 <section id="registration-container">
-    <div class="registration-form-container mx-auto" style="width:40%;">
-        <h1 class="text-primary">Registration</h1>
-        <form action="/user/registration" method="POST">
-            <div class="form-row text-light">
-                <div class="form-group">
-                    <label for="firstName">First Name</label>
-                    <input type="firstName" class="form-control" id="firstName" placeholder="First Name" name="firstName" value="{{userInput.firstName}}">
-                </div>
-                <div class="form-group">
-                    <label for="lastName">Last Name</label>
-                    <input type="lastName" class="form-control" id="lastName" placeholder="Last Name" name="lastName" value="{{userInput.lastName}}">
-                </div>
-                <div class="form-group">
-                    <label for="email">email</label>
-                    <input type="email" class="form-control" id="email" placeholder="email" name="email" value="{{userInput.email}}">
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="password" name="password" value="{{userInput.password}}">
-                </div>
-                <div class="form-group">
-                    <label for="confirmPassword">Confirm Password</label>
-                    <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password" name="confirmPassword" value="{{userInput.confirmPassword}}">
-                </div>
-            </div>
-            <button type="submit " class="btn btn-primary mt-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square-fill" viewBox="0 0 16 16">
+    <div class="container d-flex justify-content-center mt-3">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
+                <div class="card">
+                    <img src="https://images.pexels.com/photos/3771110/pexels-photo-3771110.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" class="card-img-top" />
+                    <div class="card-body">
+                        <h5 class="card-title">Create account on <span class="text-primary">Xpedian</span></h5>
+                        <form action="/user/registration" method="POST">
+                            <div class="my-3">
+                                <label for="firstName" class="mb-1">First Name</label>
+                                <input type="firstName" class="form-control" id="firstName" placeholder="First Name" name="firstName" autofocus value="{{userInput.firstName}}">      
+                            </div>
+                            <div class="my-3">
+                                <label for="lastName" class="mb-1">Last Name</label>
+                                <input type="lastName" class="form-control" id="lastName" placeholder="Last Name" name="lastName" value="{{userInput.lastName}}">
+                            </div>
+                            <div class="my-3">
+                                <label for="email" class="mb-1">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Email" name="email" value="{{userInput.email}}">
+                            </div>
+                            <div class="my-3">
+                                <label for="password" class="mb-1">Password</label>
+                                <input type="password" class="form-control" id="password" placeholder="Password" name="password" value="{{userInput.password}}">
+                            </div>
+                            <div class="my-3">
+                                <label for="confirmPassword" class="mb-1">Confirm Password</label>
+                                <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password" name="confirmPassword" value="{{userInput.confirmPassword}}">
+                            </div>
+                            <button type="submit " class="btn btn-primary d-md-block">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square-fill" viewBox="0 0 16 16">
   <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z"/>
-</svg> Registeration</button>
-        </form>
-        {{#if errors}}
-            <div class="container rounded text-danger h5 my-3 py-3 px-3 bg-warning">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
-  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-</svg> Error: <br>
-                {{#each errors}}
-                    {{this}} <br> 
-                {{/each}}
+                                </svg> 
+                                Registeration
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </div>
-        {{/if}}
-    
+        </div>
     </div>
+    {{#if errors}}
+        <div class="position-absolute top-50 start-50 translate-middle">
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>
+                    <h4 class="alert-heading">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                        </svg> Error
+                    </h4>
+                    {{#each errors}}
+                        · {{this}} <br> 
+                    {{/each}}
+                    <hr>
+                </strong>
+                <p class="mb-0 text-muted">Please try again.</p>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </div>
+    {{/if}}
 </section>
 
