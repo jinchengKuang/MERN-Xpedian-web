@@ -421,8 +421,7 @@ const ListingsModel = {
             title: "Deal",
             sub_title: "Explore hot deals",
             image: "https://images.pexels.com/photos/814544/pexels-photo-814544.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-        },
-
+        }
     ],
 
     getAllListings() {

@@ -49,7 +49,7 @@
     <div class="container">
         <div class="property-card-container">
             {{#each propertyTypes}}
-                <div class="card location-card mx-2 my-2">
+                <div class="card mx-2 my-2 property-card">
                     <img src={{this.image}} class="card-img-top" alt="...">
                     <div class="card-title h4 text-center property-card-caption">
                         {{this.property_type}}
@@ -72,13 +72,13 @@
     <div class="container">
         <div class="location-card-container">
             {{#each locations}}
-                <div class="card {{this.numbers}} {{this.property_type}}s  mx-2 my-2">
+                <div class="card mx-2 my-2 location-card">
                     <img src={{this.image}} class="card-img-top" alt="...">
                     <div class="card-title h4 text-center location-card-caption">
                         {{this.location}}
                     </div>
                     <div class="card-subtitle">
-                        <p class="text-center content-card-caption">{{this.numbers}} properties      </p>
+                        <p class="text-center content-card-caption">{{this.numbers}} properties </p>
                     </div>
                 </div>
             {{/each}}
