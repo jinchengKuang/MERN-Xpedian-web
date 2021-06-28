@@ -372,10 +372,6 @@ const ListingsModel = {
         property_type: "Hotel",
         image: "/img/property-type-img/hotel.jpg",
         numbers: 666
-    }, {
-        property_type: "Resort",
-        image: "/img/property-type-img/resort.jpg",
-        numbers: 777
     }],
 
     locations: [{
@@ -420,11 +416,11 @@ const ListingsModel = {
         }, {
             title: "Wild",
             sub_title: "Enjoy the wild life",
-            image: "/img/content-img/wild.jpg"
+            image: "https://images.pexels.com/photos/33045/lion-wild-africa-african.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
         }, {
             title: "Deal",
             sub_title: "Explore hot deals",
-            image: "/img/content-img/deal.jpg"
+            image: "https://images.pexels.com/photos/814544/pexels-photo-814544.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
         },
 
     ],

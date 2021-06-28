@@ -43,51 +43,46 @@
 {{!-- browse by property type section --}}
 <section id="browse-property-section">
     <hr>
-    <div class="browse-section-header">
-        <h1 class="text-center text-light">Browse by Property Type</h1>
-    </div>
+    <div class="text-center text-light h1">Browse by Property Type</div>
     <hr>
-    <div class="property-card-container">
-        {{#each propertyTypes}}
-            <div class="property-card">
-                <a href="">
-                    <img src={{this.image}} alt="" class="rounded">
-                </a>
-                <br>
-                <div class="property-card-caption h4 text-light text-center">
-                    {{this.property_type}}
-                    <br>
-                    <div class="property-card-captioin-numbers h5 text-muted text-center">
-                        {{this.numbers}} {{this.property_type}}s                 
+
+    <div class="container">
+        <div class="property-card-container">
+            {{#each propertyTypes}}
+                <div class="card location-card mx-2 my-2">
+                    <img src={{this.image}} class="card-img-top" alt="...">
+                    <div class="card-title h4 text-center property-card-caption">
+                        {{this.property_type}}
+                    </div>
+                    <div class="card-subtitle">
+                        <p class="text-center content-card-caption">{{this.numbers}} {{this.property_type}}s       </p>
                     </div>
                 </div>
-            </div>
-        {{/each}}
+            {{/each}}
+        </div>    
+    </div>
 </section>
 
 {{!-- browse by location type section --}}
 <section id="browse-location-section">
     <hr>
-    <div class="browse-section-header">
-        <h1 class="text-center text-light">Browse by Location</h1>
-    </div>
+    <div class="text-center text-light h1">Browse by Location</div>
     <hr>
-    <div class="location-card-container">
-        {{#each locations}}
-        <div class="location-card text-center">
-            <a href="">
-                <img src={{this.image}} alt="" class="rounded">
-            </a>
-            <br>
-            <div class="location-card-caption h4 text-light ">
-                {{this.location}}
-                <br>
-                <div class="location-card-captioin-numbers h5 text-muted ">
-                    {{this.numbers}} properties                 
+
+    <div class="container">
+        <div class="location-card-container">
+            {{#each locations}}
+                <div class="card {{this.numbers}} {{this.property_type}}s  mx-2 my-2">
+                    <img src={{this.image}} class="card-img-top" alt="...">
+                    <div class="card-title h4 text-center location-card-caption">
+                        {{this.location}}
+                    </div>
+                    <div class="card-subtitle">
+                        <p class="text-center content-card-caption">{{this.numbers}} properties      </p>
+                    </div>
                 </div>
-            </div>
-        </div>
-        {{/each}}
+            {{/each}}
+        </div>    
     </div>
 </section>
 
@@ -97,17 +92,20 @@
     <hr>
     <div class="text-center text-light h1">Discover Experience</div>
     <hr>
-    <div class="content-card-container">
-        {{#each contents}}
-        <div class="content-card text-light text-center">
-            <a href="">
-                <img src={{this.image}} alt="" class="rounded">
-            </a>
-            <h4 class="content-card-caption">{{this.title}}</h4>
-            <div class="h5 text-muted content-card-caption">
-                {{this.sub_title}}                 
-            </div>
-        </div>
-        {{/each}}
+
+    <div class="container">
+        <div class="content-card-container">
+            {{#each contents}}
+                <div class="card mx-3 ">
+                    <img src={{this.image}} class="card-img-top" alt="...">
+                    <div class="card-title h4 text-center content-card-caption">
+                        {{this.title}}
+                    </div>
+                    <div class="card-subtitle">
+                        <p class="text-center content-card-caption">{{this.sub_title}} </p>
+                    </div>
+                </div>
+            {{/each}}
+        </div>    
     </div>
 </section>

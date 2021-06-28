@@ -4,7 +4,7 @@
     {{#each listings}}
         <div class="container-fluid d-flex justify-content-center">
             <div class="card mb-3 w-75 border-primary listing-card">
-                <div class="row g-0">
+                <div class="row">
                     <div class="col-lg-4">
                         <a href="/listings/list/{{this.id}}">
                             <img src={{this.lg_image}} class="img-fluid rounded listing-pic" alt="...">                       
@@ -13,14 +13,14 @@
                     <div class="col-lg-5">
                         <div class="card-body">
                             <a href="/listings/list/{{this.id}}" class="text-decoration-none">
-                                <div class="card-title h5">{{this.title}}</div>
+                                <div class="card-title h4">{{this.title}}</div>
                             </a>
                             <p class="card-text">
                                 {{this.location}} <br>
                                 Type: {{this.property_type}} <br>
                                 {{this.details.bedroom}} bedroom | {{this.details.living_room}} living rooms | {{this.details.bathroom}} bathroom <br>
                                 {{this.details.beds.twin}} twin | {{this.details.beds.full}} full | {{this.details.beds.king}} king | {{this.details.beds.sofa_bed}} sofa bed <br>
-                                <p class="h6">
+                                <p class="h6 text-muted">
                                     {{this.summary}}
                                 </p>
                             </p>

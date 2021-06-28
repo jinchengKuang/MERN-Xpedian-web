@@ -1,9 +1,9 @@
 <section id="listing-details" class="mx-5">
 
     <div class="container details-header">
-        <div class="row">
+        <div class="row align-items-center">
             <div class="col-3">
-                <div class="details-property-type h1 text-light bg-success text-center rounded pb-1 mt-3">
+                <div class="details-property-type h1 text-light bg-info text-center rounded pb-1 mt-3">
                     {{listing.property_type}}
                 </div>
             </div>
@@ -17,14 +17,47 @@
                     </p>
                 </div>
             </div>
-
         </div>
     </div>
     <hr>
+
     <div class="container">
-        <div>
-            <img src="{{listing.lg_image}}" alt="" class="details-large-pic">
-        </div> 
+        <div class="row">
+            <div class="col-lg-9">
+                <img src="{{listing.lg_image}}" alt="" class="details-large-pic">
+            </div>
+            <div class="col-lg-3">
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <h5 class="card-title">{{listing.property_type}}</h5>
+                        <p class="card-text">
+                            Bedroom: {{listing.details.bedroom}} <br>
+                            Living Room: {{listing.details.living_room}} <br>
+                            Bathroom: {{listing.details.bathroom}} <br>
+                        </p>
+                    </div>
+                </div>
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <h5 class="card-title">Beds:</h5>
+                        <p class="card-text">
+                            Twin Bed: {{listing.details.beds.twin}} <br>
+                            Full Bed: {{listing.details.beds.full}} <br>
+                            King Bed: {{listing.details.beds.king}} <br>
+                            Sofa Bed: {{listing.details.beds.sofa_bed}} <br>
+                        </p>
+                    </div>
+                </div>
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <h5 class="card-title">Summary:</h5>
+                        <p class="card-text">
+                            {{listing.summary}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="details-pics-container">
 
@@ -36,38 +69,12 @@
         </div>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h4>Property Type: {{listing.property_type}}</h4>
-                        <h6>Bedroom: {{listing.details.bedroom}}</h6>
-                        <h6>Living Room: {{listing.details.living_room}}</h6>
-                        <h6>Bathroom: {{listing.details.bathroom}}</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-2">
-                <div class="card">
-                    <div class="card-body">
-                        <h6>Twin Bed: {{listing.details.beds.twin}}</h6>
-                        <h6>Full Bed: {{listing.details.beds.full}}</h6>
-                        <h6>King Bed: {{listing.details.beds.king}}</h6>
-                        <h6>Sofa Bed: {{listing.details.beds.sofa_bed}}</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-5">
-                <div class="card">
-                    <div class="card-body">
-                        <h5>{{listing.summary}}</h5>
-                    </div>
-                </div>
-            </div>
-        </div>     
-    </div>
-    <div class="text-center">
-        <a href="/" class="btn btn-lg btn-primary mt-3"><p class="h3 px-3">BOOK IT NOW  ${{listing.price}}</p> </a>
+    <div class="d-grid gap-2 col-6 mx-auto mt-4">
+        <a href="/" class="btn btn-lg btn-primary btn-block btn-outline-light" role="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-square" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm8.5 2.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
+            </svg>
+            BOOK IT NOW  ${{listing.price}}
+        </a>
     </div>
 </section>
